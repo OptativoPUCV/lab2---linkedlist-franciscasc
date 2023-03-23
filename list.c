@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <stdbool.h>
 #include "list.h"
 
 typedef struct Node Node;
@@ -37,7 +38,10 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  list->current = list->head;
+  if(list->head){
+    list->current = list->head;
+  }
+  else return NULL;
   return (list->head->data);
 }
 
