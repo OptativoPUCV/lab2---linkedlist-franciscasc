@@ -48,7 +48,7 @@ void * firstList(List * list) {
 void * nextList(List * list) {
   Node *n = (Node *) malloc(sizeof(Node));
   if(list->current)
-    n->next = list->current;
+    n->next = list->current->data;
   else return NULL;
   return n->next;
 }
