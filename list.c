@@ -125,7 +125,7 @@ void * popCurrent(List * list) {
     list->current->next->prev = list->current->prev;
   }
   if(list->tail == list->current)
-    list->tail = list->current;
+    list->tail->prev = list->current;
   return (list->current->data);
 }
 void cleanList(List * list) {
