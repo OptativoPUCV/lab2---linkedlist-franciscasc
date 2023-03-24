@@ -94,12 +94,12 @@ void pushCurrent(List * list, void * data) {
     nodo->next = list->current->next;
     nodo->prev = list->current;
     list->current->next = nodo;
-  }else{
+  }
+  else {
     list->head = nodo;
     list->tail = nodo;
     list->current = nodo;
   }
-  if (list->tail == list->current) 
   list->tail = nodo;
 }
 
