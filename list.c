@@ -46,28 +46,40 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-  if(!list->current) return NULL; //ver si existe
-  if(!list->current->next) return NULL; // ver si existe
+  if(!list->current) 
+    return NULL; //ver si existe
+  if(!list->current->next) 
+    return NULL; // ver si existe
   list->current = list->current->next;
   return (list->current->data);
 }
 
 void * lastList(List * list) {
-  if(!list->tail) return NULL;
-  if(!list->current) return NULL;
+  if(!list->tail) 
+    return NULL;
+  if(!list->current) 
+    return NULL;
   list->current = list->tail;
   return (list->tail->data);
 }
 
 void * prevList(List * list) {
-  if(!list->current) return NULL; //ver si existe
-  if(!list->current->prev) return NULL; // ver si existe
+  if(!list->current)
+    return NULL;
+  if(!list->current->prev) 
+    return NULL;
   list->current = list->current->prev;
   return (list->current->data);
   return NULL;
 }
 
 void pushFront(List * list, void * data) {
+  Node *n = createNode(data);
+  n->next = list->head;
+  if(list->head){
+    list->head->prev = n;
+  }
+  
 }
 
 void pushBack(List * list, void * data) {
