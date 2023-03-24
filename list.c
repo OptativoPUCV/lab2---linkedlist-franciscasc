@@ -125,7 +125,7 @@ void * popCurrent(List * list) {
     list->current->next->prev = list->current->prev;
   }
   return (list->current->data);
-
+}
 void cleanList(List * list) {
     while (list->head != NULL) {
         popFront(list);
