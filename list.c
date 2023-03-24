@@ -92,10 +92,10 @@ void pushCurrent(List * list, void * data) {
   Node * nodo = createNode(data);
   if(list->current){
     nodo->next = list->current->next;
-    nodo->prev = list->current; //apunta a current, no a head ***
+    nodo->prev = list->current; //apunta a current, no a head (error 1)
     list->current->next = nodo;
   }
-  else{ //si list-> current no está, tanto list head, list tail y list current toman el valor del nodo
+  else{ //si list->current no está o no es null, tanto list->head, list->tail y list->current toman el valor del nodo
     list->head = nodo;
     list->tail = nodo;
     list->current = nodo;
