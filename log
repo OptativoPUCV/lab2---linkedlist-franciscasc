@@ -721,3 +721,13 @@ Fri 24 Mar 2023 02:33:21 PM UTC:
  tests:  10|2
 total_score: 45/70
 64b9735
+Fri 24 Mar 2023 02:33:58 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:100:1: error: expected identifier before ‘}’ token
+  100 | }
+      | ^
+Compilation failed
+1608066
