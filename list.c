@@ -100,7 +100,7 @@ void pushCurrent(List * list, void * data) {
     list->tail = nodo;
     list->current = nodo;
   }
-  //list->tail = nodo;
+  list->tail = nodo;
 }
 
 
