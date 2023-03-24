@@ -772,3 +772,13 @@ Fri 24 Mar 2023 02:36:46 PM UTC:
  tests:  10|2
 total_score: 45/70
 280a92a
+Fri 24 Mar 2023 02:37:39 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:95:18: error: ‘Node’ has no member named ‘current’
+   95 |   list->tail=nodo->current;
+      |                  ^~
+Compilation failed
+5314985
