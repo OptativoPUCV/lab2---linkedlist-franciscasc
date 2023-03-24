@@ -578,3 +578,16 @@ Fri 24 Mar 2023 02:20:59 PM UTC:
  tests:  10|2
 total_score: 45/70
 918f471
+Fri 24 Mar 2023 02:21:15 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:98:18: error: expected ‘;’ before ‘list’
+   98 |   list->tail=nodo
+      |                  ^
+      |                  ;
+   99 |   list->tail->prev = nodo;
+      |   ~~~~            
+Compilation failed
+1a07010
