@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <stdbool.h>
 #include "list.h"
 
 typedef struct Node Node;
@@ -90,6 +89,14 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
+  Node * nodo = createNode(data);
+  nodo->next = list->current;
+  if(list->current){
+    list->current->next = nodo;
+  }
+  list->head = nodo;
+  list->tail = nodo;
+  nodo->prev = NULL;
 }
 
 void * popFront(List * list) {
