@@ -613,3 +613,21 @@ Fri 24 Mar 2023 02:24:09 PM UTC:
  tests:  10|2
 total_score: 45/70
 ff83e5f
+Fri 24 Mar 2023 02:24:52 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:98:7: error: ‘head’ undeclared (first use in this function)
+   98 |   if (head->next->data=NULL) return NULL;
+      |       ^~~~
+list.c:98:7: note: each undeclared identifier is reported only once for each function it appears in
+list.c:98:37: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   98 |   if (head->next->data=NULL) return NULL;
+      |                                     ^~~~
+list.c:91:6: note: declared here
+   91 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6328542
