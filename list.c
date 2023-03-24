@@ -46,14 +46,17 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-  if(!list->current) return NULL;
-  if(!list->current->next) return NULL;
+  if(!list->current) return NULL; //ver si existe
+  if(!list->current->next) return NULL; // ver si existe
   list->current = list->current->next;
   return (list->current->data);
 }
 
 void * lastList(List * list) {
-    return NULL;
+  if(!list->tail) return NULL;
+  if(!list->current) return NULL;
+  list->current = list->tail;
+  return (list->tail->data);
 }
 
 void * prevList(List * list) {
