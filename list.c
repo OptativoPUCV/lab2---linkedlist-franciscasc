@@ -62,7 +62,7 @@ void * lastList(List * list) {
 void * prevList(List * list) {
   if(!list->current) return NULL; //ver si existe
   if(!list->current->prev) return NULL; // ver si existe
-  list->current = list->current->next;
+  list->current = list->current->prev;
   return (list->current->data);
   return NULL;
 }
