@@ -90,18 +90,17 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * list, void * data) {
   Node * nodo = createNode(data);
-  if (!list->current) {
-    list->head = nodo;
-    list->tail = nodo;
-    list->current = nodo;
-  }else{
+  if(list->current){
     nodo->next = list->current->next;
     nodo->prev = list->current;
     list->current->next = nodo;
+  }else{
+    list->head = nodo;
+    list->tail = nodo;
+    list->current = nodo;
   }
   if (list->tail == list->current) 
   list->tail = nodo;
-
 }
 
 
