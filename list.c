@@ -99,6 +99,7 @@ void pushCurrent(List * list, void * data) {
     list->tail->prev = nodo;
   }
   list->tail = nodo;
+  nodo->data = data;
 
 }
 
