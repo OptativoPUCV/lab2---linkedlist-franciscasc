@@ -95,14 +95,13 @@ void pushCurrent(List * list, void * data) {
     nodo->prev = list->current;
     list->current->next = nodo;
   }
-  else {
+  else{
     list->head = nodo;
     list->tail = nodo;
     list->current = nodo;
   }
   list->tail = nodo;
 }
-
 
 void * popFront(List * list) {
     list->current = list->head;
@@ -115,13 +114,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  if(list->current->prev){
-    list->current->prev->next = list->current->next;
-  }
-  else list->head = list->current->next;
-  if(list->current->next){
-    list->current->next->prev = list->current->prev;
-  }
+  
   return (list->current->data);
 }
 
