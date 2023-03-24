@@ -46,11 +46,11 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-  Node *n = (Node *) malloc(sizeof(Node));
-  if(list->current)
-    n->next = list->current;
+  if(list->current){
+    list->current = list->current->next;
+  }
   else return NULL;
-  return n->next;
+  return list->current->data;
 }
 
 void * lastList(List * list) {
