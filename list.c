@@ -97,7 +97,7 @@ void pushCurrent(List * list, void * data) {
   }
   list->current = nodo;
   nodo->prev = list->head;
-  list->tail = nodo;
+  nodo->next = list->tail;
 }
 
 void * popFront(List * list) {
