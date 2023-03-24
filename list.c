@@ -60,7 +60,11 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-    return NULL;
+  if(!list->current) return NULL; //ver si existe
+  if(!list->current->prev) return NULL; // ver si existe
+  list->current = list->current->next;
+  return (list->current->data);
+  return NULL;
 }
 
 void pushFront(List * list, void * data) {
